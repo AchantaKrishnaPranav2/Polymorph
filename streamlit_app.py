@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.title("BORON")
-st.sidebar.title("Properties")
+st.sidebar.title("Properties :black[app]")
 st.sidebar.header("Physical")
 st.sidebar.link_button("Click here for the code","https://krishnapranav.streamlit.app/")
 
