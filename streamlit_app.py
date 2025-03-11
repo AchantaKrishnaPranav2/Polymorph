@@ -34,7 +34,11 @@ if a == ":red[B]  :fire:" :
   )
   st.subheader("Electronic configuration :")
   st.latex("2s^2 2p^1 ")
-  
+
+  col1, col2, col3 = st.columns(3)
+  col1.metric("Group", "13")
+  col2.metric("Period", "2")
+  col3.metric("Block", "P-block")
    
   
   
