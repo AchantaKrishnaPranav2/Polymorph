@@ -5,7 +5,7 @@ st.sidebar.title("Properties")
 st.sidebar.header("Physical",divider = True)
 st.sidebar.link_button("Click here for the code","https://krishnapranav.streamlit.app/")
 
-a = st.radio("Choose",["red[B]:fire:",":green[K]:sunglasses"],captions = ["Boron","Potassium"] ,index = None)
+a = st.radio("Choose",[":red[B]:fire:",":orange[K]:sunglasses:"],captions = ["Boron","Potassium"] ,index = None)
 time.sleep(1)
 if a == "B":
   st.write(":red[Boron] has the symbol B and atomic number 5")
