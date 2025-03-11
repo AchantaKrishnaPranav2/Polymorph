@@ -15,7 +15,7 @@ if a == "B":
   time.sleep(2)
   st.text("Molecular weight: 10.811")
   time.sleep(1)
-  st.subheader(" In its crystalline form it is a brittle, dark, lustrous :yellow[metalloid]")
+  st.subheader(" In its crystalline form it is a brittle, dark, lustrous :rainbow[metalloid]")
   
 
 
