@@ -10,6 +10,7 @@ a = st.radio("Choose",["B","K"],captions = ["Boron","Potassium"] ,index = None)
 time.sleep(1)
 if a == "B":
   st.text("You chose  to view information about Boron")
-  st.text("
+  time.sleep(1)
+  st.text("Molecular weight: 10.811")
 
 
