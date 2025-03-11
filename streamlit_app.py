@@ -20,6 +20,7 @@ if a == ":red[B]  :fire:" :
         "name": ["dark ,Lustrous , Brittle, Metalloid"],
         "url": ["Brown Powder"],
     }
+  )
   st.dataframe(
     df,
     column_config={
