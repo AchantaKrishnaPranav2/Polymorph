@@ -6,5 +6,5 @@ st.header("Formula :red[B]:fire:",divider = True)
 st.sidebar.header("Physical",divider = True)
 st.sidebar.link_button("Click here for the code","https://krishnapranav.streamlit.app/")
 
-st.checkbox("Boron",value = True)
+st.checkbox("Boron",value = False)
 st.button("submit")
