@@ -6,6 +6,6 @@ st.header("Formula :red[B]:fire:",divider = True)
 st.sidebar.header("Physical",divider = True)
 st.sidebar.link_button("Click here for the code","https://krishnapranav.streamlit.app/")
 
-a = st.radio("Boron""Potassium", index = None)
+a = st.radio("Choose","Boron""Potassium", index = None)
 
 
