@@ -32,9 +32,9 @@ if a == ":red[B]  :fire:" :
     height = 50,
     hide_index=True,
   )
-  st.write("Electronic configuration is")
+  st.write("Electronic configuration is",st.latex("2s^2 2p^1 "))
   
-  k = st.latex("2s^2 2p^1 ")
+   
   
   
 
