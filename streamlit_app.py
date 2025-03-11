@@ -13,7 +13,7 @@ if a == ":red[B]  :fire:" :
   time.sleep(1)
   st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Boron_R105.jpg/330px-Boron_R105.jpg",caption = "boron (β-rhombohedral)",width = 300)
   time.sleep(2)
-  st.write("Molecular weight: 10.811", divider = Falsee)
+  st.write("Molecular weight: 10.811", divider = red)
   time.sleep(3)
   df = pd.DataFrame(
     {
