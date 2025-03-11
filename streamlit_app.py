@@ -32,7 +32,7 @@ if a == ":red[B]  :fire:" :
     height = 50,
     hide_index=True,
   )
-  st.metric(label="Temperature", value="70 °F", delta="1.2 °F")
+  st.metric(label="Electronic Configuration", value= st.latex("2s^2 2p^1"), delta="1.2 °F")
   
 
 
