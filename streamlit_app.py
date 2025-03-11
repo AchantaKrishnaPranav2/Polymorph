@@ -32,7 +32,8 @@ if a == ":red[B]  :fire:" :
     height = 50,
     hide_index=True,
   )
-  st.write("Electronic configuration is",st.latex("2s^2 2p^1 "))
+  st.subheader("Electronic configuration :")
+  st.latex("2s^2 2p^1 ")
   
    
   
