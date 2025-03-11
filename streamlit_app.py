@@ -26,7 +26,7 @@ if a == ":red[B]  :fire:" :
     column_config={
         "name": "Crystalline Form",
         
-        "url": st.column_config.LinkColumn("Amorphous Form"),
+        "url": "Amorphous Form",
        
     },
     hide_index=True,
