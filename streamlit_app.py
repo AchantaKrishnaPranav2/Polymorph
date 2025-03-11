@@ -1,5 +1,6 @@
 import streamlit as st
 import time
+import pandas as pd
 st.title("ELEMENTS")
 st.sidebar.title("Properties")
 st.sidebar.header("Physical",divider = True)
@@ -13,8 +14,23 @@ if a == ":red[B]  :fire:" :
   st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Boron_R105.jpg/330px-Boron_R105.jpg",caption = "boron (β-rhombohedral)",width = 300)
   time.sleep(2)
   st.text("Molecular weight: 10.811")
-  time.sleep(1)
-  st.write(" In its crystalline form it is a brittle, dark,lustrous :grey[metalloid]")
+  time.sleep(3)
+  df = pd.DataFrame(
+    {
+        "name": ["dark ,Lustrous , Brittle, Metalloid"],
+        "url": ["Brown Powder"],
+    }
+  st.dataframe(
+    df,
+    column_config={
+        "name": "Crystalline Form",
+        
+        "url": st.column_config.LinkColumn("Amorphous Form"),
+       
+    },
+    hide_index=True,
+  )
+  st.write(" In its crystalline form it is a brittle, dark,lustrous :red[metalloid]")
   
 
 
