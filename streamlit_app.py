@@ -3,7 +3,7 @@ import time
 import pandas as pd
 st.title("ELEMENTS")
 st.sidebar.title("Properties")
-st.sidebar.header("Physical",divider = True)
+st.sidebar.header("Physical",divider = False)
 st.sidebar.link_button("Click here for the code","https://krishnapranav.streamlit.app/")
 
 a = st.radio("Choose",[":red[B]  :fire:",":violet[K]  :sparkles:"],captions = ["Boron","Potassium"] ,index = None)
@@ -13,7 +13,7 @@ if a == ":red[B]  :fire:" :
   time.sleep(1)
   st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Boron_R105.jpg/330px-Boron_R105.jpg",caption = "boron (β-rhombohedral)",width = 300)
   time.sleep(2)
-  st.write("Molecular weight: 10.811", divider = True)
+  st.write("Molecular weight: 10.811", divider = Falsee)
   time.sleep(3)
   df = pd.DataFrame(
     {
