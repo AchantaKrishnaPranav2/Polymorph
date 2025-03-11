@@ -9,8 +9,10 @@ st.sidebar.link_button("Click here for the code","https://krishnapranav.streamli
 a = st.radio("Choose",["B","K"],captions = ["Boron","Potassium"] ,index = None)
 time.sleep(1)
 if a == "B":
-  st.text("You chose  to view information about Boron")
-  time.sleep(1)
+  st.text(":violet[Boron] has the symbol B and atomic number 5")
+  st.image("https://upload.wikimedia.org/wikipedia/commons/1/19/Boron_R105.jpg")
+  time.sleep(2)
   st.text("Molecular weight: 10.811")
+  
 
 
