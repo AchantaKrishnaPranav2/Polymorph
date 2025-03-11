@@ -33,7 +33,7 @@ if a == ":red[B]  :fire:" :
     hide_index=True,
   )
   k = st.latex(" Electronic configuration is 2s^2 2p^1 ")
-  st.text(f"{k}")
+  st.write(f"{k}")
   
   
 
