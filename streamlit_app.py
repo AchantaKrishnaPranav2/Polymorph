@@ -32,7 +32,10 @@ if a == ":red[B]  :fire:" :
     height = 50,
     hide_index=True,
   )
-  st.write(" In its crystalline form it is a brittle, dark,lustrous :red[metalloid]")
+  col1, col2, col3 = st.columns(3)
+  col1.metric("Electron configuration", st.latex("2s^2"), "1.2 °F")
+  col2.metric("Wind", "9 mph", "-8%")
+  col3.metric("Humidity", "86%", "4%")
   
 
 
