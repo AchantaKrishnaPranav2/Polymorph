@@ -29,7 +29,7 @@ if a == ":red[B]  :fire:" :
         "url": "Amorphous Form",
        
     },width =300,
-    height = 200
+    height = 200,
     hide_index=True,
   )
   st.write(" In its crystalline form it is a brittle, dark,lustrous :red[metalloid]")
