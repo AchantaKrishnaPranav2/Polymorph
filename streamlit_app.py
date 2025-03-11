@@ -32,8 +32,8 @@ if a == ":red[B]  :fire:" :
     height = 50,
     hide_index=True,
   )
-  k = st.latex("2s^2 2p^1")
-  st.metric(label="Electronic Configuration", value= k , delta= None)
+  
+  st.metric(label="Electronic Configuration", value= "2s^2 2p^1" , delta= None)
   
 
 
