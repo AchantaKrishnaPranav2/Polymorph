@@ -2,7 +2,7 @@ import streamlit as st
 
 st.title("ELEMENTS")
 st.sidebar.title("Properties")
-st.header("Formula :green[B]")
+st.header("Formula :cyan[B]")
 st.sidebar.header("Physical")
 st.sidebar.link_button("Click here for the code","https://krishnapranav.streamlit.app/")
 
