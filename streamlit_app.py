@@ -65,7 +65,7 @@ if a == ":red[B]  :fire:" :
       st.title("Cp vs Temperature (Filtered Range)")
   
       # Line chart for filtered Cp vs Temperature
-      st.line_chart(df_filtered.set_index("Temperature (K)")["Cp (J/mol*K)"],height = 500)
+      st.line_chart(df_filtered.set_index("Temperature (K)")["Cp (J/mol*K)"],height = 100)
 
      
   
