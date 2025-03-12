@@ -39,7 +39,9 @@ if a == ":red[B]  :fire:" :
   col1.metric("Group", "13")
   col2.metric("Period", "2")
   col3.metric("Block", "P-block")
-  
+
+  st.header("Gas Phase Heat Capacity (Shomate Equation)")
+  st.Latex("Cp° = A + B*t + C*t2 + D*t3 + E/t2")
   # Create DataFrame
   data = {
       "Temperature (K)": [4138, 4200, 4300, 4400, 4500, 4600, 4700, 4800, 4900, 5000,
@@ -59,6 +61,7 @@ if a == ":red[B]  :fire:" :
   # Line chart for filtered Cp vs Temperature
   st.line_chart(df.set_index("Temperature (K)")["Cp*100 (J/mol*K)"],height = 150)
 
+  
      
   
   
