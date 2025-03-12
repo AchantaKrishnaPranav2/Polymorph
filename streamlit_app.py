@@ -41,7 +41,7 @@ if a == ":red[B]  :fire:" :
   col3.metric("Block", "P-block")
 
   st.header("Gas Phase Heat Capacity (Shomate Equation)")
-  st.Latex("Cp° = A + B*t + C*t2 + D*t3 + E/t2")
+  st.latex("Cp° = A + B*t^1 + C*t^22 + D*t^3 + E/t^2")
   # Create DataFrame
   data = {
       "Temperature (K)": [4138, 4200, 4300, 4400, 4500, 4600, 4700, 4800, 4900, 5000,
