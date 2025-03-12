@@ -39,33 +39,26 @@ if a == ":red[B]  :fire:" :
   col1.metric("Group", "13")
   col2.metric("Period", "2")
   col3.metric("Block", "P-block")
-
-
+  
+  
   # Create DataFrame
   data = {
       "Temperature (K)": [4138, 4200, 4300, 4400, 4500, 4600, 4700, 4800, 4900, 5000,
                           5100, 5200, 5300, 5400, 5500, 5600, 5700, 5800, 5900, 6000],
-      "Cp (J/mol*K)": [20.86, 20.87, 20.89, 20.91, 20.94, 20.96, 20.99, 21.02, 21.05, 21.09,
-                       21.13, 21.17, 21.21, 21.26, 21.31, 21.36, 21.42, 21.48, 21.55, 21.61]
+      "Cp*100 (J/mol*K)": [2086, 2087, 2089, 2091, 2094, 2096, 2099, 2102, 2105, 2109,
+                       2113, 2117, 2121, 2126, 2131, 2136, 2142, 2148, 2155, 2161]
   }
   
   df = pd.DataFrame(data)
   
-  # Define filter range
-  cp_min, cp_max = 20.8, 21.7
   
-  # Filter data for Cp within range
-  df_filtered = df[(df["Cp (J/mol*K)"] >= cp_min) & (df["Cp (J/mol*K)"] <= cp_max)]
   
-  # Ensure filtered data is not empty
-  if df_filtered.empty:
-      st.warning(f"No data points found in the range {cp_min} to {cp_max}.")
-  else:
-      # Streamlit app
-      st.title("Cp vs Temperature (Filtered Range)")
   
-      # Line chart for filtered Cp vs Temperature
-      st.line_chart(df_filtered.set_index("Temperature (K)")["Cp (J/mol*K)"],height = 100)
+  
+  st.title("Cp*100 vs Temperature (Filtered Range)")
+  
+  # Line chart for filtered Cp vs Temperature
+  st.line_chart(df.set_index("Temperature (K)")["Cp*100 (J/mol*K)"],height = 100)
 
      
   
