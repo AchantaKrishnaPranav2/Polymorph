@@ -40,20 +40,24 @@ if a == ":red[B]  :fire:" :
   col2.metric("Period", "2")
   col3.metric("Block", "P-block")
 
+  # Create DataFrame
   data = {
-    "Temperature (K)": [4138, 4200, 4300, 4400, 4500, 4600, 4700, 4800, 4900, 5000,
-                        5100, 5200, 5300, 5400, 5500, 5600, 5700, 5800, 5900, 6000],
-    "Cp (J/mol*K)": [20.86, 20.87, 20.89, 20.91, 20.94, 20.96, 20.99, 21.02, 21.05, 21.09,
-                     21.13, 21.17, 21.21, 21.26, 21.31, 21.36, 21.42, 21.48, 21.55, 21.61]
+      "Temperature (K)": [4138, 4200, 4300, 4400, 4500, 4600, 4700, 4800, 4900, 5000,
+                          5100, 5200, 5300, 5400, 5500, 5600, 5700, 5800, 5900, 6000],
+      "Cp (J/mol*K)": [20.86, 20.87, 20.89, 20.91, 20.94, 20.96, 20.99, 21.02, 21.05, 21.09,
+                       21.13, 21.17, 21.21, 21.26, 21.31, 21.36, 21.42, 21.48, 21.55, 21.61]
   }
-
-  df = pd.DataFrame(data)
-
-  # Streamlit app
-  st.title("Cp vs Temperature")
   
-  # Line chart for Cp vs Temperature
-  st.line_chart(df.set_index("Temperature (K)")["Cp (J/mol*K)"])
+  df = pd.DataFrame(data)
+  
+  # Filter data for Cp between 20.8 and 21.7
+  df_filtered = df[(df["Cp (J/mol*K)"] >= 20.8) & (df["Cp (J/mol*K)"] <= 21.7)]
+  
+  # Streamlit app
+  st.title("Cp vs Temperature (Filtered Range)")
+  
+  # Line chart for filtered Cp vs Temperature
+  st.line_chart(df_filtered.set_index("Temperature (K)")["Cp (J/mol*K)"])
      
   
   
