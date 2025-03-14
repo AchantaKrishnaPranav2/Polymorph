@@ -15,9 +15,9 @@ if a == ":red[B]  :fire:":
     time.sleep(1)
     st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Boron_R105.jpg/330px-Boron_R105.jpg",
              caption="Boron (β-rhombohedral)", width=300)
-    time.sleep(2)
-    st.write("Molecular weight: 10.811", divider=True)
-    time.sleep(3)
+    time.sleep(4)
+    st.subheader("Molecular weight: 10.811", divider=True)
+    time.sleep(4)
     
     df = pd.DataFrame(
         {
@@ -36,16 +36,15 @@ if a == ":red[B]  :fire:":
         height=100,
         hide_index=True,
     )
-    
+    time.sleep(2)
     st.subheader("Electronic Configuration:")
     st.latex("2s^2 2p^1 ")
-    time.sleep(4)
-    
+    time.sleep(1)
     col1, col2, col3 = st.columns(3)
     col1.metric("Group", "13")
     col2.metric("Period", "2")
     col3.metric("Block", "P-block")
-    
+    time.sleep(1)
     option = st.selectbox(
     "Heat Capacity",
     ("Gas Phase", "Liquid Phase", "Solid Phase"), index = None
