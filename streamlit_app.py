@@ -87,7 +87,7 @@ if a == ":red[B]  :fire:":
     # Streamlit app
     st.subheader("Cp*100 vs Temperature")    
    
-    st.line_chart(df.set_index("Temperature (K)"))
+    st.line_chart(df.set_index("Temperature (K)")["Cp*100 (J/mol*K)"], height=150)
     
         
   
