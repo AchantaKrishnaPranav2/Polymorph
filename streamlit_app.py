@@ -49,6 +49,8 @@ if a == ":red[B]  :fire:":
     "Heat Capacity",
     ("Gas Phase", "Liquid Phase", "Solid Phase"), index = None
     )
+    st.divider()
+    
     if option == "Gas Phase":
         
         st.subheader("Gas Phase Heat Capacity (Shomate Equation)")
