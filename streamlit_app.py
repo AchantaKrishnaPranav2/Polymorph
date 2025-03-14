@@ -119,7 +119,9 @@ if a == ":red[B]  :fire:":
         # Line chart for properties vs Temperature
         st.line_chart(df.set_index("Temperature (K)")["Cp*100 (J/mol*K)"], height=400)    
         
-      
+    st.subheader("Wagner Plot of Binding Energies, Auger kinetic Energies, and Modified Auger Parameters for Materials Containing the Element: B ")
+    st.write("(Principal Photoelectron Line: 1s; Principal Auger-Electron Line: KVV):")   
+    st.image("C:\Users\KRISHNA PRANAV\Downloads\image.png")
          
       
   
