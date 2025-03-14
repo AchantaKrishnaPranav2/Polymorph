@@ -121,7 +121,7 @@ if a == ":red[B]  :fire:":
         
     st.subheader("Wagner Plot of Binding Energies, Auger kinetic Energies, and Modified Auger Parameters for Materials Containing the Element: B ")
     st.write("(Principal Photoelectron Line: 1s; Principal Auger-Electron Line: KVV):")   
-    st.image(" C:\Users\KRISHNA PRANAV\Downloads\image.png")
+    
          
       
   
