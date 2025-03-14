@@ -33,7 +33,7 @@ if a == ":red[B]  :fire:":
             "url": "Amorphous Form",
         },
         width=400,
-        height=50,
+        height=100,
         hide_index=True,
     )
     
