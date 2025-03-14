@@ -89,10 +89,32 @@ if a == ":red[B]  :fire:":
     df = df.sort_values(by="Temperature (K)", ascending=True)
     st.line_chart(df.set_index("Temperature (K)")["Cp*100 (J/mol*K)"], height=150)
     
+    data = {
+        "Temperature (K)": [
+            298, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800,
+            1900, 2000, 2100, 2200, 2300
+        ],
+        "Cp (J/mol*K)": [
+            11.21, 11.33, 15.83, 18.63, 20.62, 22.15, 23.34, 24.30, 25.07, 25.70, 26.22, 26.68, 27.08,
+            27.48, 27.88, 28.32, 28.73, 29.10, 29.45, 29.80, 30.14, 30.48
+        ]
+        }
         
-  
-     
-  
+    df = pd.DataFrame(data)
+        
+    # Sort data by Temperature (just to ensure correct order)
+    df = df.sort_values(by="Temperature (K)", ascending=True)
+    
+    time.sleep(5)
+        
+    st.subheader("Thermodynamic Properties vs Temperature")
+    
+    # Line chart for properties vs Temperature
+    st.line_chart(df.set_index("Temperature (K)"), height=400)
+        
+      
+         
+      
   
 
 
