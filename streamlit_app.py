@@ -86,8 +86,8 @@ if a == ":red[B]  :fire:":
     st.write("A = 31.75003 B = 2.556177×10-7 C = -6.456792×10-8 D = 5.616644×10-9 E = 2.705970×10-7")
     # Streamlit app
     st.subheader("Cp*100 vs Temperature")    
-   
-    st.line_chart(df.set_index("Temperature (K)")("Cp*100 (J/mol*K)"), height=150)
+    df = df.sort_values(by="Temperature (K)", ascending=True)
+    st.line_chart(df.set_index("Temperature (K)")["Cp*100 (J/mol*K)"], height=150)
     
         
   
