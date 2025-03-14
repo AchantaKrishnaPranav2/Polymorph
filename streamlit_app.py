@@ -65,7 +65,7 @@ if a == ":red[B]  :fire:":
 
     time.sleep(5)
 
-    st.title("Cp*100 vs Temperature")
+    st.header("Cp*100 vs Temperature  for Boron")
 
     # Line chart for Cp vs Temperature (Ordered)
     st.line_chart(df.set_index("Temperature (K)")["Cp*100 (J/mol*K)"], height=150)
