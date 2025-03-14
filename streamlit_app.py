@@ -48,6 +48,11 @@ if a == ":red[B]  :fire:":
 
     st.header("Gas Phase Heat Capacity (Shomate Equation)")
     st.latex("Cp° = A + B*t^1 + C*t^2 + D*t^3 + E/t^2")
+    st.write("A	20.65193
+    B	0.226427
+    C	-0.112330
+    D	0.016889
+    E	0.008714")
     
     # Create DataFrame (Ordered by Temperature)
     data = {
