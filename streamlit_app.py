@@ -46,7 +46,7 @@ if a == ":red[B]  :fire:":
     col2.metric("Period", "2")
     col3.metric("Block", "P-block")
 
-    st.header("Gas Phase Heat Capacity (Shomate Equation)")
+    st.subheader("Gas Phase Heat Capacity (Shomate Equation)")
     st.latex("Cp° = A + B*t^1 + C*t^2 + D*t^3 + E/t^2")
     st.write("A	= 20.65193\n B = 0.226427\n C =	-0.112330\n D =	0.016889\n E = 0.008714")
     
@@ -65,12 +65,29 @@ if a == ":red[B]  :fire:":
 
     time.sleep(5)
 
-    st.header("Cp*100 vs Temperature  for Boron")
+    st.subheader("Cp*100 vs Temperature  for Boron in gaseous state")
 
     # Line chart for Cp vs Temperature (Ordered)
     st.line_chart(df.set_index("Temperature (K)")["Cp*100 (J/mol*K)"], height=150)
 
 
+
+    # Data
+    data = {
+        "Temperature (K)": [2350, 2400, 2500, 2600, 2700, 2800, 2900, 3000, 3100, 3200, 3300, 3400, 3500, 3600, 3700, 3800, 3900, 4000, 4100],
+        "Cp (J/mol*K)": [3175] * 19,
+        
+    }
+    
+    # Create DataFrame
+    df = pd.DataFrame(data)
+    
+    # Streamlit app
+    st.subheader("Cp*100 vs Temperature")    
+   
+    st.line_chart(df.set_index("Temperature (K)"))
+    
+        
   
      
   
