@@ -81,7 +81,9 @@ if a == ":red[B]  :fire:":
     
     # Create DataFrame
     df = pd.DataFrame(data)
-    
+    st.subheader("Liquid Phase Heat Capacity (Shomate Equation)")
+    st.latex("Cp° = A + B*t + C*t^2 + D*t^3 + E/t^2")
+    st.write("A = 31.75003 B = 2.556177×10-7 C = -6.456792×10-8 D = 5.616644×10-9 E = 2.705970×10-7")
     # Streamlit app
     st.subheader("Cp*100 vs Temperature")    
    
