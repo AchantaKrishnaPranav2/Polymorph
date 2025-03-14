@@ -45,13 +45,11 @@ if a == ":red[B]  :fire:":
     col2.metric("Period", "2")
     col3.metric("Block", "P-block")
     time.sleep(1)
-    st.divider()
     
     option = st.selectbox(
     "Heat Capacity",
     ("Gas Phase", "Liquid Phase", "Solid Phase"), index = None
     )
-    st.divider()
     
     if option == "Gas Phase":
         
