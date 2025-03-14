@@ -8,16 +8,12 @@ st.sidebar.header("Physical", divider=False)
 st.sidebar.link_button("Click here for the code", "https://krishnapranav.streamlit.app/")
 
 a = st.radio("Choose", [":red[B]  :fire:", ":violet[K]  :sparkles:"], captions=["Boron", "Potassium"], index=None)
-time.sleep(1)
 
 if a == ":red[B]  :fire:":
     st.write(":red[Boron] has the symbol B and atomic number 5", divider=True)
-    time.sleep(1)
     st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Boron_R105.jpg/330px-Boron_R105.jpg",
              caption="Boron (β-rhombohedral)", width=300)
-    time.sleep(4)
     st.subheader("Molecular weight: 10.811", divider=True)
-    time.sleep(4)
     
     df = pd.DataFrame(
         {
@@ -36,15 +32,12 @@ if a == ":red[B]  :fire:":
         height=100,
         hide_index=True,
     )
-    time.sleep(2)
     st.subheader("Electronic Configuration:")
     st.latex("2s^2 2p^1 ")
-    time.sleep(1)
     col1, col2, col3 = st.columns(3)
     col1.metric("Group", "13")
     col2.metric("Period", "2")
     col3.metric("Block", "P-block")
-    time.sleep(1)
     
     option = st.selectbox(
     "Heat Capacity",
@@ -70,7 +63,7 @@ if a == ":red[B]  :fire:":
         # Sort data by Temperature (just to ensure correct order)
         df = df.sort_values(by="Temperature (K)", ascending=True)
     
-        time.sleep(5)
+        
     
         st.subheader("Cp*100 vs Temperature  for Boron in gaseous state")
     
@@ -112,8 +105,7 @@ if a == ":red[B]  :fire:":
             
         # Sort data by Temperature (just to ensure correct order)
         df = df.sort_values(by="Temperature (K)", ascending=True)
-        
-        time.sleep(5)
+    
         st.subheader("Solid Phase Heat Capacity (Shomate Equation)")
         st.latex("Cp° = A + B*t + C*t^2 + D*t^3 + E/t^2")
         
