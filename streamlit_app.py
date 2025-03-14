@@ -48,7 +48,7 @@ if a == ":red[B]  :fire:":
     
     option = st.selectbox(
     "Heat Capacity",
-    ("Gas Phase", "Liquid Phase", "Solid Phase"),
+    ("Gas Phase", "Liquid Phase", "Solid Phase"), index = None
     )
     if option == "Gas Phase":
         
