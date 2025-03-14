@@ -94,7 +94,7 @@ if a == ":red[B]  :fire:":
             298, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800,1800,
             1900, 2000, 2100, 2200, 2300
         ],
-        "Cp (J/mol*K)": [
+        "Cp*100 (J/mol*K)": [
             11.21, 11.33, 15.83, 18.63, 20.62, 22.15, 23.34, 24.30, 25.07, 25.70, 26.22, 26.68, 27.08,
             27.48, 27.88, 28.32,28.83, 28.73, 29.10, 29.45, 29.80, 30.14, 30.48
         ]
@@ -106,11 +106,24 @@ if a == ":red[B]  :fire:":
     df = df.sort_values(by="Temperature (K)", ascending=True)
     
     time.sleep(5)
-        
-    st.subheader("Thermodynamic Properties vs Temperature")
+    st.subheader("Solid Phase Heat Capacity (Shomate Equation)")
+    st.latex("Cp° = A + B*t + C*t^2 + D*t^3 + E/t^2")
+    
+    st.write("| Coefficient | 298 K to 1800 K | 1800 K to 2350 K |")
+    st.write("|------------|----------------|----------------|")
+    st.write("| A          | 10.18574       | 25.12664       |")
+    st.write("| B          | 29.24415       | 1.975493       |")
+    st.write("| C          | -18.02137      | 0.338395       |")
+    st.write("| D          | 4.212326       | -0.040032      |")
+    st.write("| E          | -0.550999      | -2.635578      |")
+    st.write("| F          | -6.036299      | -14.43597      |")
+    st.write("| G          | 7.089077       | 25.5993        |")
+
+    # Streamlit app
+    st.subheader("Cp*100 vs Temperature")    
     
     # Line chart for properties vs Temperature
-    st.line_chart(df.set_index("Temperature (K)"), height=400)
+    st.line_chart(df.set_index("Temperature (K)")["Cp*100 (J/mol*K)"], height=150)    
         
       
          
