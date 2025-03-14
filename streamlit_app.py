@@ -68,7 +68,7 @@ if a == ":red[B]  :fire:":
     st.subheader("Cp*100 vs Temperature  for Boron in gaseous state")
 
     # Line chart for Cp vs Temperature (Ordered)
-    st.line_chart(df.set_index("Temperature (K)")["Cp*100 (J/mol*K)"], height=150)
+    st.line_chart(df.set_index("Temperature (K)")["Cp*100 (J/mol*K)"], height=400)
 
 
 
@@ -85,9 +85,9 @@ if a == ":red[B]  :fire:":
     st.latex("Cp° = A + B*t + C*t^2 + D*t^3 + E/t^2")
     st.write("A = 31.75003 B = 2.556177×10-7 C = -6.456792×10-8 D = 5.616644×10-9 E = 2.705970×10-7")
     # Streamlit app
-    st.subheader("Cp*100 vs Temperature")    
+    st.subheader("Cp*100 vs Temperature in Liquid state")    
     df = df.sort_values(by="Temperature (K)", ascending=True)
-    st.line_chart(df.set_index("Temperature (K)")["Cp*100 (J/mol*K)"], height=150)
+    st.line_chart(df.set_index("Temperature (K)")["Cp*100 (J/mol*K)"], height=400)
     
     data = {
         "Temperature (K)": [
@@ -109,21 +109,15 @@ if a == ":red[B]  :fire:":
     st.subheader("Solid Phase Heat Capacity (Shomate Equation)")
     st.latex("Cp° = A + B*t + C*t^2 + D*t^3 + E/t^2")
     
-    st.write("| Coefficient | 298 K to 1800 K | 1800 K to 2350 K |")
-    st.write("|------------|----------------|----------------|")
-    st.write("| A          | 10.18574       | 25.12664       |")
-    st.write("| B          | 29.24415       | 1.975493       |")
-    st.write("| C          | -18.02137      | 0.338395       |")
-    st.write("| D          | 4.212326       | -0.040032      |")
-    st.write("| E          | -0.550999      | -2.635578      |")
-    st.write("| F          | -6.036299      | -14.43597      |")
-    st.write("| G          | 7.089077       | 25.5993        |")
-
+    st.write(" 298 K to 1800 K ")
+    st.write("A = 10.18574  B = 29.24415 C = -18.02137 D = 4.212326 E = -0.550999")
+    st.write("1800 K to 2350 K ")
+    st.write("A = 25.12664 B = 1.975493 C = 0.338395 D = -0.040032 E = -2.635578")
     # Streamlit app
-    st.subheader("Cp*100 vs Temperature")    
+    st.subheader("Cp*100 vs Temperature in Solid state")    
     
     # Line chart for properties vs Temperature
-    st.line_chart(df.set_index("Temperature (K)")["Cp*100 (J/mol*K)"], height=150)    
+    st.line_chart(df.set_index("Temperature (K)")["Cp*100 (J/mol*K)"], height=400)    
         
       
          
